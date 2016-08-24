@@ -1,4 +1,6 @@
 # auto-test
+[![Build Status](https://travis-ci.org/mildronize/auto-test.svg?branch=master)](https://travis-ci.org/mildronize/auto-test)
+
 Auto test script ( watchdog + nose ) for TDD ( with test )
 
 ## Requirements
