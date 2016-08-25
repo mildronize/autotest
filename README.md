@@ -1,5 +1,5 @@
 # auto-test
-[![Build Status](https://travis-ci.org/mildronize/auto-test.svg?branch=master)](https://travis-ci.org/mildronize/auto-test)
+[![Build Status](https://travis-ci.org/mildronize/auto-test.svg?branch=master)](https://travis-ci.org/mildronize/auto-test) [![Coverage Status](https://coveralls.io/repos/github/mildronize/auto-test/badge.svg?branch=master)](https://coveralls.io/github/mildronize/auto-test?branch=master)
 
 Auto test script ( watchdog + nose ) for TDD ( with test )
 
