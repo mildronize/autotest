@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 import os
+import ntpath
+import posixpath
 import sys
 import time
 from watchdog.observers import Observer
@@ -22,11 +24,10 @@ def process_filename_and_package_invert(file_path, os_name=None, startswith_test
     else:
         test_style = "_test"
     package = file_path.replace( UNITEST_DIR+seperater, "").replace(".py", "")[2:]
-    print(package)
+    # print(package)
     package = package.replace(seperater, ".").replace(test_style, "")
     package = "{}.{}".format(PACKAGE_NAME, package)
-    print(package)
-    print(os.path.abspath(file_path))
+    # print(package) print(os.path.abspath(file_path))
     test_file_path = file_path[2:]
     return {
         "test_file_path": test_file_path,
@@ -45,10 +46,13 @@ def process_filename_and_package(file_path, os_name=None, startswith_test=True):
     package = removed_head_tail.replace(seperater, ".")
     # package == "simple_calculator.sub.calculator"
 
-    basename = os.path.basename(file_path)
+    # basename = os.path.basename(file_path)
+    if os_name == 'nt':
+        basename = ntpath.basename(file_path)
+    else:
+        basename = posixpath.basename(file_path)
     # basename == "calculator.py"
     prefix_path = file_path[2:].replace(basename, "")[:-1].replace(file_path.split(seperater)[1], "")
-    print(prefix_path)
     # prefix_path == "/sub"
     if startswith_test:
         test_basename = "test_{}".format(basename)
