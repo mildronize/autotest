@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+import time
+import sys
+
+from watchdog.observers import Observer
+from watchdog.events import PatternMatchingEventHandler
+
+from autotest import PathProcessor
+
+unittest_dir = "tests"
+package_name = "simple_calculator"
+startswith_test = True
+
+class ModifiedHandler(PatternMatchingEventHandler):
+    patterns = ["*.py"]
+
+    def on_created(self, event):
+        PathProcessor(unittest_dir, package_name, startswith_test) \
+            .when_file_changed(event.src_path)
+
+    def on_any_event(self, event):
+        print(event)
+
+    def on_modified(self, event):
+        PathProcessor(unittest_dir, package_name, startswith_test) \
+            .when_file_changed(event.src_path)
+
+if __name__ == '__main__':
+    args = sys.argv[1:]
+    event_handler = ModifiedHandler()
+    observer = Observer()
+    observer.schedule(event_handler,
+                      path=args[1] if args else '.', recursive=True)
+    observer.start()
+
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
