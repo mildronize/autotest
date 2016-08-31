@@ -13,7 +13,7 @@ endef
 
 export PRINT_HELP_PYSCRIPT
 # CONFIG
-PACKAGE_NAME := auto_test
+PACKAGE_NAME := autotest
 
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
@@ -42,4 +42,4 @@ lint: ## check style with flake8
 	flake8 $(PACKAGE_NAME) test
 
 test: ## Test all codes with coverage
-	nosetests --rednose --with-coverage --cover-erase --cover-package=$(PACKAGE_NAME) -v test/test_auto_test.py
+	nosetests --rednose --with-coverage --cover-erase --cover-package=$(PACKAGE_NAME) -v test/test_autotest.py

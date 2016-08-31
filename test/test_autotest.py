@@ -1,6 +1,6 @@
 import unittest
 
-from auto_test import *
+from autotest import *
 
 class TestAutotest(unittest.TestCase):
 
