@@ -1,6 +1,6 @@
 # auto-test
 [![Build Status](https://travis-ci.org/mildronize/autotest.svg?branch=master)](https://travis-ci.org/mildronize/autotest)
-[![Coverage Status](https://coveralls.io/repos/github/mildronize/auto-test/badge.svg?branch=master)](https://coveralls.io/github/mildronize/auto-test?branch=master) 
+[![Coverage Status](https://coveralls.io/repos/github/mildronize/auto-test/badge.svg?branch=master)](https://coveralls.io/github/mildronize/auto-test?branch=master)
 [![Code Health](https://landscape.io/github/mildronize/autotest/master/landscape.svg?style=flat)](https://landscape.io/github/mildronize/autotest/master)
 
 Auto test script ( watchdog + nose ) for TDD ( with test )
@@ -10,8 +10,18 @@ Auto test script ( watchdog + nose ) for TDD ( with test )
 - see in `requirements.txt`
 
 ## Feature
-- Watch a file and if the file is modified, the test will start. 
+- Watch a file and if the file is modified, the test will start.
 - Support Windows and Unix path
+
+## Usage
+```
+# Activate python enviroment
+git submodule add https://github.com/mildronize/autotest.git .autotest
+pip install -r .autotest/requirements.txt
+ln -sr .autotest/run_autotest .
+./run_autotest
+```
+
 
 ## Development
 1. Clone this project
@@ -21,4 +31,5 @@ Auto test script ( watchdog + nose ) for TDD ( with test )
 
 ## Todo
 - [x] Build on Travis CI
+- [ ] Add CLI
 - [ ] Use tox test runner
