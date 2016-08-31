@@ -1,5 +1,7 @@
 # auto-test
-[![Build Status](https://travis-ci.org/mildronize/auto-test.svg?branch=master)](https://travis-ci.org/mildronize/auto-test) [![Coverage Status](https://coveralls.io/repos/github/mildronize/auto-test/badge.svg?branch=master)](https://coveralls.io/github/mildronize/auto-test?branch=master) [![Code Health](https://landscape.io/github/mildronize/auto-test/master/landscape.svg?style=flat)](https://landscape.io/github/mildronize/auto-test/master)
+[![Build Status](https://travis-ci.org/mildronize/autotest.svg?branch=master)](https://travis-ci.org/mildronize/autotest)
+[![Coverage Status](https://coveralls.io/repos/github/mildronize/auto-test/badge.svg?branch=master)](https://coveralls.io/github/mildronize/auto-test?branch=master) 
+[![Code Health](https://landscape.io/github/mildronize/autotest/master/landscape.svg?style=flat)](https://landscape.io/github/mildronize/autotest/master)
 
 Auto test script ( watchdog + nose ) for TDD ( with test )
 
