@@ -11,7 +11,7 @@ Auto test script ( watchdog + nose ) for TDD ( with test )
 - Watch a file and if the file is modified, the test will start. 
 - Support Windows and Unix path
 
-## Develpment
+## Development
 1. Clone this project
 2. Create and activate a python virtual environment
 3. Install requirements by: `pip install -r requirements.txt`
