@@ -1,6 +1,6 @@
-# auto-test
+# autotest
 [![Build Status](https://travis-ci.org/mildronize/autotest.svg?branch=master)](https://travis-ci.org/mildronize/autotest)
-[![Coverage Status](https://coveralls.io/repos/github/mildronize/auto-test/badge.svg?branch=master)](https://coveralls.io/github/mildronize/auto-test?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/mildronize/autotest/badge.svg?branch=master)](https://coveralls.io/github/mildronize/autotest?branch=master)
 [![Code Health](https://landscape.io/github/mildronize/autotest/master/landscape.svg?style=flat)](https://landscape.io/github/mildronize/autotest/master)
 
 Auto test script ( watchdog + nose ) for TDD ( with test )
@@ -31,5 +31,6 @@ ln -sr .autotest/run_autotest .
 
 ## Todo
 - [x] Build on Travis CI
+- [ ] Explain the detail of usage
 - [ ] Add CLI
 - [ ] Use tox test runner
