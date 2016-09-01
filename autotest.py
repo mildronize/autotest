@@ -55,7 +55,7 @@ class PathProcessor:
         if startswith_test:
             test_basename = "test_{}".format(basename)
         else:
-            test_basename = "{}_test.py".format(basename.replace(".py",""))
+            test_basename = "{}_test.py".format(basename.replace(".py", ""))
         test_file_path = "{}{}{}{}".format(self.unittest_dir, prefix_path, seperater, test_basename)
         return {
             "package": package,
